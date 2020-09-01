@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d0aae04-3ba5-4c9c-94b5-f85636aa4c57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MIMO/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/CxNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO/CxNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_add_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_add_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_add_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_add_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_merge_SN20_ans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_merge_SN20_in.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_real_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_real_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_real_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_real_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_add_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_add_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_add_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_dft_receive_add_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_1_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_1_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_1_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_1_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_gold_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_m_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_m_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_m_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len15_m_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_dft_add_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_dft_add_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_dft_add_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_dft_add_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_noise_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_noise_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_noise_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_noise_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_real_noise_SN20_Imans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_real_noise_SN20_Imin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_real_noise_SN20_Reans.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/DL_data/16_path1_len16_real_noise_SN20_Rein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_add_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_merge_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_receive_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_receive_add_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_dft_receive_merge_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Animation/16_path1_gold_SN20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_add_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_cxnn_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_merge_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_real_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_receive_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_receive_add_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_dft_receive_merge_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_gold_1_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_gold_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_m_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_noise_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch/Epoch_16_path1_real_noise_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_add_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_cxnn_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_merge_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_receive_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_receive_add_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_dft_receive_merge_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_gold_1_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_gold_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_noise_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/Data/Epoch_data/Epoch_16_path1_real_noise_SN20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/GAN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/GAN_dft_receive_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/GAN_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/GAN_receive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/NW_DNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO/compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/estimate.py" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO/estimate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/pilot_validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/MIMO/pilot_validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/split_DNN_boosting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_NW.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_dft.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_dft_add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_gold.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_m.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_noise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIMO/train_real_noise.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MIMO" />
+  </component>
+  <component name="ProjectId" id="1aVlnGmHd4ad1y532Q32dtAy6i6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d0aae04-3ba5-4c9c-94b5-f85636aa4c57" name="Default Changelist" comment="" />
+      <created>1586828807078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586828807078</updated>
+      <workItem from="1586828818961" duration="14000" />
+      <workItem from="1588694791281" duration="3000" />
+    </task>
+    <servers />
+  </component>
+</project>
