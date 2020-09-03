@@ -6,7 +6,7 @@ import numpy as np
 from Model.utils import dec2bitarray, bitarray2dec, hamming_dist, euclid_dist
 
 class Convcode:
-    def __init__(self, user, BS, data_symbol, bit_rate, code_rate, conv_type):
+    def __init__(self, user, user_antenna, BS_antenna, data_symbol, bit_rate, code_rate, conv_type):
         """
         Class that performs convolutional code
 
@@ -26,7 +26,8 @@ class Convcode:
 
         """
         self.user = user
-        self.BS = BS
+        self.user_antenna = user_antenna
+        self.BS = BS_antenna
         self.symbol = data_symbol
         self.bit_rate = bit_rate
         self.code_rate = code_rate
@@ -56,10 +57,10 @@ class Convcode:
         generator polynomial G1=171(oct)、G2=133(oct), and perform puncturing processing according to coding rate.
 
         Args:
-            send_bit : 2D ndarray [user, symbol * bit_rate]
+            send_bit : 2D ndarray [select_user * user_antenna, bit_rate * symbol]
 
         Returns:
-            code_bit : 2D ndarray [user, symbol * bit_rate * 1/code_rate]
+            code_bit : 2D ndarray [select_user * user_antenna, bit_rate * symbol * 1/code_rate]
 
                          ex) 16AQM, symbol=72, user=4, code_rate=3/4
 
@@ -71,7 +72,7 @@ class Convcode:
 
 
         code_bit = []
-        for s in range(self.user):
+        for s in range(self.user * self.user_antenna):
             code_tmp = conv_encode(send_bit[s][:], self.trellis)
             code_tmp = code_tmp[:self.bit_rate * self.symbol * 2]
             self.shouldbe = len(code_tmp)

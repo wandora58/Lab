@@ -5,10 +5,11 @@ from scipy.linalg import dft
 
 
 class Equalization:
-    def __init__(self, code_symbol, user, BS, Nc):
+    def __init__(self, code_symbol, user, user_antenna, BS_anntena, Nc):
         self.symbol = code_symbol
         self.user = user
-        self.BS = BS
+        self.user_antenna = user_antenna
+        self.BS = BS_anntena
         self.Nc = Nc
 
 
@@ -77,6 +78,56 @@ class Equalization:
                 ZF_signal[s,i] = S[s,0]
 
         return np.round(ZF_signal, decimals=7)
+
+
+    def MMSE(self, receive_signal, seleced_channel, SNR):
+        """
+
+        MMSE Equalization
+
+        Args:
+            receive_signal : 2D ndarray [BS_antenna, symbol * 1/code_rate]
+           seleced_channel : 2D ndarray [BS_antenna, select_user * user_antenna]
+
+        Returns:
+               MMSE_signal : 2D ndarray [select_user * user_antenna, symbol * 1/code_rate]
+
+                                H = seleced_channel
+                               Nt = user * user_antenna
+                               Nr = BS_anntena
+
+
+                      Weight_MMSE = (H^H * H + (Nt * INt)/SNR )^-1  *  H^H
+
+                      for i in symbol:
+                          S: 2D ndarray [user * user_antenna, 1]
+                          R: 2D ndarray [BS_anntena, 1]
+
+                          S = Weight_MMSE * R
+
+                          for s in user * user_antenna:
+                              MMSE_signal[s,i] = S[s,0]
+
+
+        """
+        H = seleced_channel
+        Nt = self.user * self.user_antenna
+        INt = (Nt / SNR) * np.eye(Nt)
+
+        Weight_MMSE = np.linalg.pinv(np.conjugate(H.T) @ H + INt) @ np.conjugate(H.T)
+
+        R = np.zeros((self.BS, 1), dtype=np.complex)
+        MMSE_signal = np.zeros((self.user * self.user_antenna, self.symbol), dtype=np.complex)
+
+        for i in range(self.symbol):
+            R[:,0] = receive_signal[:,i]
+            S = Weight_MMSE @ R
+
+            for s in range(self.user * self.user_antenna):
+                MMSE_signal[s,i] = S[s,0]
+
+        return np.round(MMSE_signal, decimals=7)
+
 
 
     def MMSE_FDE(self, receive_signal, channel, sigma):

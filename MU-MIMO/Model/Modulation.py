@@ -8,7 +8,7 @@ from sympy.combinatorics.graycode import GrayCode
 
 class Modulation:
 
-    def __init__(self, M, code_symbol, data_symbol, bit, user, BS):
+    def __init__(self, M, code_symbol, data_symbol, bit_rate, user, user_antenna, BS_antenna):
         """
 
         modulation class.
@@ -51,9 +51,10 @@ class Modulation:
         self.M = M
         self.symbol = code_symbol
         self.data_symbol = data_symbol
-        self.bit = bit
+        self.bit = bit_rate
         self.user = user
-        self.BS = BS
+        self.user_antenna = user_antenna
+        self.BS = BS_antenna
         self.array_bit = list((GrayCode(int(bit/2)).generate_gray()))
         self.array_power, self.threshould_power = self.calculate_power(M, bit)
 
@@ -97,21 +98,32 @@ class Modulation:
         M-QAM modulation function.
 
         Args:
-            send_bit : 2D ndarray [user, symbol * bit_rate * 1/code_rate]
+            if convcode:
+                send_bit : 2D ndarray [select_user * user_antenna, bit_rate * symbol * 1/code_rate]
+
+            if not convcode:
+                send_bit : 2D ndarray [select_user * user_antenna, bit_rate * symbol]
 
         Returns:
-            send_signal : 2D ndarray [user, symbol * 1/code_rate]
-                            send signal after M-QAM modulation of send bit
+            if convcode:
+                send_signal : 2D ndarray [select_user * user_antenna, symbol * 1/code_rate]
+                              send signal after M-QAM modulation of send bit
 
-                                us1  [[symbol11, symbol12, symbol13]
-                                us2   [symbol21, symbol22, symbol23]
-                                us3   [symbol31, symbol32, symbol33]
-                                      [  ...  ,    ...   ,   ...   ]]
+                                              symbol * 1/code_rate
+
+                                seU1_a1  [[symbol11, symbol12, symbol13]
+                                seU1_a2   [symbol21, symbol22, symbol23]
+                                   ..                   ..
+                                seU2_a1   [symbol31, symbol32, symbol33]
+                                seU2_a2   [  ...  ,    ...   ,   ...   ]]
+
+            if not convcode:
+                send_signal : 2D ndarray [select_user * user_antenna, symbol]
 
         """
-        send_signal = np.zeros((self.user, self.symbol), dtype=np.complex)
+        send_signal = np.zeros((self.user * self.user_antenna, self.symbol), dtype=np.complex)
 
-        for s in range(self.user):
+        for s in range(self.user * self.user_antenna):
             for i in range(self.symbol):
                 bit_I = ''
                 bit_Q = ''
@@ -194,7 +206,7 @@ class Modulation:
                                 llr_num += np.exp((-abs(current_symbol - symbol) ** 2) / (sigma*sigma))
                             else:
                                 llr_den += np.exp((-abs(current_symbol - symbol) ** 2) / (sigma*sigma))
-                                
+
                         receive_bit[r][i * self.bit + self.bit - 1 - bit_index] = np.log(llr_num / llr_den)
 
             return receive_bit

@@ -7,6 +7,7 @@ import itertools
 import numpy as np
 import pandas as pd
 import math
+import cmath
 import random
 import matplotlib
 
@@ -475,26 +476,27 @@ class Load:
 
 
 class Serial2Parallel:
-    def __init__(self, data_stream, user, bit_rate, symbol):
+    def __init__(self, data_stream, select_user, user_antenna, bit_rate, data_symbol):
         self.data_stream = data_stream
-        self.user = user
+        self.user = select_user
+        self.user_antenna = user_antenna
         self.bit_rate = bit_rate
-        self.symbol = symbol
+        self.symbol = data_symbol
 
     def create_parallel(self):
         """
         Serial to Parallel
 
         Args:
-            data_stream : 1D ndarray [user * bit_rate * symbol],
+            data_stream : 1D ndarray [select_user * user_antenna * bit_rate * symbol],
 
         Returns:
-            send_bit : 2D ndarray [user, bit_rate * symbol]
+            send_bit : 2D ndarray [select_user * user_antenna, bit_rate * symbol]
 
         """
         send_bit = []
         tmp = 0
-        for i in range(self.user):
+        for i in range(self.user * self.user_antenna):
             if i == 0:
                 send_bit.append(self.data_stream[: self.symbol*self.bit_rate])
             else:
@@ -735,3 +737,24 @@ def cumulative_probability(channel, user, BS):
     plt.grid(which="both")
 
     plt.savefig('Image/cdf/user{}_BS{}.pdf'.format(user, BS))
+
+
+def MMSE_channel_capacity(channel, user, user_antenna, BS_anntena, SNR):
+
+    H = channel
+    Nt = user * user_antenna
+    Nr = BS_anntena
+    INr = (Nt / SNR) * np.eye(Nr)
+    W_MMSE = np.linalg.pinv(np.conjugate(H) @ H.T + INr)
+
+    C_MMSE = 0
+
+    for i in range(Nt):
+        h = H[:,i]
+        w = W_MMSE @ np.conjugate(h)
+
+        C_MMSE += np.log2(1 + np.abs(w.T @ h) ** 2 / (np.conjugate(w.T) @ np.conjugate(h) - np.abs(w.T @ h) ** 2))
+
+    return np.real(C_MMSE)
+
+
